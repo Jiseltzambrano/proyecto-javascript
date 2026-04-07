@@ -8,3 +8,12 @@ const aprendices = [
     { nombre: "Gabriel", nota: 4.7, programa: "ADSO" }, 
     { nombre: "Valentina", nota: 4.7, programa: "Diseno Web" } 
 ];
+
+function mostrarAprendices(aprendices){
+    const aprendicesADSO = aprendices.filter(apr=> apr.programa === "ADSO");
+    const aprendicesDW = aprendices.filter(apr=> apr.programa === "Diseno Web");
+    console.table(aprendicesADSO);
+    console.table(aprendicesDW);
+}
+
+mostrarAprendices(aprendices);
