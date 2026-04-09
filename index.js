@@ -17,3 +17,14 @@ const aprendices = [
     }
 
     mostrarAprendices(aprendices);
+
+    function mostrarAprendicesAprobados(aprendices){
+        const aprendicesAprobados = aprendices.filter(aprendiz=> aprendiz.nota >= 3.0);
+        console.log("===Aprendices Aprobados===");
+        console.table(aprendicesAprobados);
+    }
+
+    mostrarAprendicesAprobados(aprendices);
+
+
+    
