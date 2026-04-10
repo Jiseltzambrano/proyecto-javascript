@@ -8,37 +8,12 @@ const aprendices = [
     { nombre: "Gabriel", nota: 4.7, programa: "ADSO" }, 
     { nombre: "Valentina", nota: 4.7, programa: "Diseno Web" } 
 ];
-function mostrarMenu() {
-    let opcion = "";
-    while (opcion !== "0") {
-        console.log("\nMenú de opciones:"); 
-        switch (opcion) {
-            case "1":
-                mostrarAprendices();
-                break;
-            case "2":
-                mostrarAprendicesAprobados();
-                break;
-            case "3":
-                aprendicesReprobados();
-                break;
-            case "4":
-                mostrarNombresMayuscula();
-                break;
-            case "5":
-                promedioGeneral();
-                break;
-            case "6":
-                ordenarNota ();
-                break;
-            case "7":
-                desempeño();
-                break;
-            case "0":
-                console.log("Saliendo del programa...");
-                break;
-            default:
-                console.log("Opción no válida");
-        }
-    }
+
+function mostrarAprendices(aprendices){
+    const aprendicesADSO = aprendices.filter(apr=> apr.programa === "ADSO");
+    const aprendicesDW = aprendices.filter(apr=> apr.programa === "Diseno Web");
+    console.table(aprendicesADSO);
+    console.table(aprendicesDW);
 }
+
+mostrarAprendices(aprendices);
