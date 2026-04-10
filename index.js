@@ -56,3 +56,12 @@ function mostrarNombresMayuscula(aprendices) {
 }
 
 mostrarNombresMayuscula(aprendices);
+
+
+function ordenarNota (aprendices){
+    const ordenados = [...aprendices].sort ((a,b) => b.nota - a.nota);
+
+    console.log("===Aprendices ordenados por nota de mayor a menor===");
+    console.table(ordenados);
+}
+ordenarNota(aprendices);
