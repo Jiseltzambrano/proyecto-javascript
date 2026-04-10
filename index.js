@@ -9,11 +9,22 @@ const aprendices = [
     { nombre: "Valentina", nota: 4.7, programa: "Diseno Web" } 
 ];
 
-function mostrarAprendices(aprendices){
-    const aprendicesADSO = aprendices.filter(apr=> apr.programa === "ADSO");
-    const aprendicesDW = aprendices.filter(apr=> apr.programa === "Diseno Web");
-    console.table(aprendicesADSO);
-    console.table(aprendicesDW);
-}
+    function mostrarAprendices(aprendices){
+        const aprendicesADSO = aprendices.filter(apr=> apr.programa === "ADSO");
+        const aprendicesDW = aprendices.filter(apr=> apr.programa === "Diseno Web");
+        console.table(aprendicesADSO);
+        console.table(aprendicesDW);
+    }
 
-mostrarAprendices(aprendices);
+    mostrarAprendices(aprendices);
+
+    function mostrarAprendicesAprobados(aprendices){
+        const aprendicesAprobados = aprendices.filter(aprendiz=> aprendiz.nota >= 3.0);
+        console.log("===Aprendices Aprobados===");
+        console.table(aprendicesAprobados);
+    }
+
+    mostrarAprendicesAprobados(aprendices);
+
+
+    
