@@ -12,10 +12,13 @@ const aprendices = [
     function mostrarAprendices(aprendices){
         const aprendicesADSO = aprendices.filter(apr=> apr.programa === "ADSO");
         const aprendicesDW = aprendices.filter(apr=> apr.programa === "Diseno Web");
-        return {aprendicesADSO, aprendicesDW};
-    console.table(aprendicesADSO);
+        
+        console.table(aprendicesADSO);
         console.table(aprendicesDW);
+        return {aprendicesADSO, aprendicesDW};
     }
+
+    mostrarAprendices(aprendices);
 
     function promedioGeneral(aprendices){
     ADSO = mostrarAprendices(aprendices).aprendicesADSO;
