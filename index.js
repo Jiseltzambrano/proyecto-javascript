@@ -12,11 +12,24 @@ const aprendices = [
     function mostrarAprendices(aprendices){
         const aprendicesADSO = aprendices.filter(apr=> apr.programa === "ADSO");
         const aprendicesDW = aprendices.filter(apr=> apr.programa === "Diseno Web");
-        console.table(aprendicesADSO);
+        return {aprendicesADSO, aprendicesDW};
+    console.table(aprendicesADSO);
         console.table(aprendicesDW);
     }
 
-    mostrarAprendices(aprendices);
+    function promedioGeneral(aprendices){
+    ADSO = mostrarAprendices(aprendices).aprendicesADSO;
+    const suma = ADSO.reduce((acc, apr)=> acc + apr.nota,0);
+    const promedio = suma/ADSO.length;
+    console.log(`el promedio de notas de todos los aprendices ADSO es: ${promedio}`);
+    DW = mostrarAprendices(aprendices).aprendicesDW;
+    const sumaDW = DW.reduce((acc, apr)=> acc + apr.nota,0);
+    const promedioDW = sumaDW/DW.length;
+    console.log(`el promedio de notas de todos los aprendices Diseno Web es: ${promedioDW}`);
+}
+
+
+promedioGeneral(aprendices);
 
     function mostrarAprendicesAprobados(aprendices){
         const aprendicesAprobados = aprendices.filter(aprendiz=> aprendiz.nota >= 3.0);
