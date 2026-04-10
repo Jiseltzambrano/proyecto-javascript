@@ -35,3 +35,11 @@ console.table(reprobados);
 }
 
 aprendicesReprobados(aprendices);
+
+function mostrarNombresMayuscula(aprendices) {
+    const nombresMayuscula = aprendices.map (aprendices => aprendices.nombre.toUpperCase());
+    console.log("===Nombres en mayuscula===");
+    console.table(nombresMayuscula);
+}
+
+mostrarNombresMayuscula(aprendices);
