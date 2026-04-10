@@ -28,7 +28,6 @@ const aprendices = [
     console.log(`el promedio de notas de todos los aprendices Diseno Web es: ${promedioDW}`);
 }
 
-
 promedioGeneral(aprendices);
 
     function mostrarAprendicesAprobados(aprendices){
@@ -65,3 +64,24 @@ function ordenarNota (aprendices){
     console.table(ordenados);
 }
 ordenarNota(aprendices);
+
+function desempeño(aprendices){
+    
+    for (aprendices of aprendices) {
+    switch (true) {
+        case aprendices.nota >= 4.5 && aprendices.nota <= 5.0:
+            console.log(`${aprendices.nombre} tiene un desempeño superior`);
+            break;
+        case aprendices.nota >= 4 && aprendices.nota < 4.5:
+            console.log(`${aprendices.nombre} tiene un desempeño alto`);
+            break;  
+        case aprendices.nota >= 3 && aprendices.nota < 4.0:
+            console.log(`${aprendices.nombre} tiene un desempeño basico`);
+            break;
+        default:
+            console.log(`${aprendices.nombre} tiene un desempeño bajo`);
+        };
+    }
+    }
+
+    desempeño(aprendices); 
